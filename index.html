@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Journal</title>
+  </head>
+  <body>
+    <header><h1 class="title">My Journal</h1></header>
+
+    
+    <!-- Journal Entry Section -->
+    <section class="section journal-section">
+      <div class="container">
+        <div class="container-row container-row-journal">
+          <div class="container-item container-item-journal">
+
+
+            <button type="button" class="collapsible">Create a New Journal Entry</button>
+            <div class="content">
+                <br>
+                
+                <form id="entryForm" action="">
+
+                    <!-- new journal entry -->
+                    <label for="entry-title" class="journal-label">New Journal Entry</label>
+                    <p class="description">💡 Creative tip: Try to come up with a creative name for your day :)</p>
+                    <input type="text" name="entry-title" id="entry-title" class="entry-text-title" placeholder="Name of entry ✏️"/>
+                    
+                    <!-- mood -->
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="10" value="5" class="slider" id="mood">
+                        <p id="mood2">1</p>
+                    </div>
+                    
+                    <!-- entry text -->
+                    <label for="entry" class="journal-label">Journal about your day here...</label>
+                    <textarea name="daily-entry" id="entry" class="entry-text-box" placeholder="What's on your mind today? 💭 &#10Don't know what to write about? Here are some questions to get you started on your entry: &#10-What'd you eat throughout the day? &#10-Did you go anywhere? &#10-Did you see anybody? &#10-How did you feel?"></textarea>
+                    <button class="btn-main entry-submit-btn" type="submit">Submit</button>
+                </form>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Journal Entry Results -->
+    <section class="section sectionEntryResults" id="entryResultsSection">
+      <div class="container">
+        <div class="container-row entryResultRow"></div>
+      </div>
+    </section>
+
+    <script src="code.js"></script>
+  </body>
+</html>
