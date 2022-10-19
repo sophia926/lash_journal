@@ -123,7 +123,7 @@ input[class^='btn-']:hover {
 /* Journal Entry Section */
 
 /* Title */
-
+.date,
 .entry-text-title {
   width: 20em;
   margin: 1em auto;
@@ -269,7 +269,12 @@ input[class^='btn-']:hover {
 }
 
 .single-entry-date {
-  background-color: lightgoldenrodyellow;
+  color: rgb(248, 179, 215);
+  width: 100%;
+}
+
+.single-entry-text {
+  color: lightgoldenrodyellow;
   width: 100%;
 }
 
@@ -385,4 +390,10 @@ input[class^='btn-']:hover {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     cursor: pointer; /* Cursor on hover */
+}
+
+.output {
+  font-size: 25px;
+  padding: 0px;
+  margin: 0px;
 }

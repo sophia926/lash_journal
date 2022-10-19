@@ -34,11 +34,15 @@
                     <p class="description">💡 Creative tip: Try to come up with a creative name for your day :)</p>
                     <input type="text" name="entry-title" id="entry-title" class="entry-text-title" placeholder="Name of entry ✏️"/>
                     
+                    <!-- date -->
+                    <label for="entry-title" class="journal-label">Date</label>
+                    <input type="text" name="entry-title" id="entry-title" class="date" placeholder="Date 📆"/>
+
                     <!-- mood -->
                     <label for="entry-title" class="journal-label">Mood Rating</label>
                     <p class="description">😁 Rate your mood on a scale from 1-10 :)</p>
                     <div class="slidecontainer">
-                      <p id="output">5</p>
+                      <p id="output" class="output">5</p>
                       <input type="range" min="1" max="10" value="5" class="slider" id="mood">
                     </div>
 
@@ -51,9 +55,9 @@
                     <!-- gratitudes -->
                     <label for="entry" class="journal-label">3 Gratitudes...</label>
                     <p class="description">🙏 Try to think of three gratitudes for today... </p>
-                    <textarea name="daily-entry" id="entry" class="gratitude-text-box" placeholder="Gratitude #1"></textarea>
-                    <textarea name="daily-entry" id="entry" class="gratitude-text-box" placeholder="Gratitude #2"></textarea>
-                    <textarea name="daily-entry" id="entry" class="gratitude-text-box" placeholder="Gratitude #3"></textarea>
+                    <textarea id="entry1" class="gratitude-text-box" placeholder="Gratitude #1"></textarea>
+                    <textarea id="entry2" class="gratitude-text-box" placeholder="Gratitude #2"></textarea>
+                    <textarea id="entry3" class="gratitude-text-box" placeholder="Gratitude #3"></textarea>
                     <!-- Gratitude inspiration question RANDOM API -->
                     <button type="button" class="grat-collapsible">Need inspiration?</button>
                     <div class="grat-content">
