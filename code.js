@@ -139,7 +139,7 @@ slider.oninput = function() {
   }
 }
 
-// api
+// api gratitude
 function gratitudeGen() {
   const options = {
       method: 'GET',
@@ -154,5 +154,23 @@ function gratitudeGen() {
       // .then(response => console.log(response))
       // .then(response => (question = response))
       .then(response => (document.getElementById("gratituderesult").innerHTML = response['question']))
+      .catch(err => console.error(err));
+}
+
+// api inspiration quotes
+function quotesGen() {
+  const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': '222daebd02msh197e0db183672fap17cc9djsn8a1f2f813e5b',
+          'X-RapidAPI-Host': 'inspiring-quotes.p.rapidapi.com'
+      }
+  };
+
+  fetch('https://inspiring-quotes.p.rapidapi.com/random', options)
+      .then(response => response.json())
+      // .then(response => console.log(response))
+      // .then(response => (question = response))
+      .then(response => (document.getElementById("quoteresult").innerHTML = response['author'] + 'once said, "'+ response['quote'] + '"'))
       .catch(err => console.error(err));
 }
