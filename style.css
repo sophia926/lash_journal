@@ -93,6 +93,14 @@ header {
   cursor: pointer;
 }
 
+.name-btn {
+  padding: 0.6rem 2rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 .btn-main {
   color: lightgoldenrodyellow;
   background-color: lightcoral;
@@ -124,6 +132,7 @@ input[class^='btn-']:hover {
 
 /* Title */
 .date,
+.name,
 .entry-text-title {
   width: 20em;
   margin: 1em auto;

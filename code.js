@@ -1,7 +1,5 @@
     /* eslint-disable */
 
-// My Starter JavaScript Template
-
 // Journal Entry Form
 
 const entryForm = document.querySelector("#entryForm");
@@ -19,11 +17,8 @@ const getEntry3 = document.getElementById("entry3");
 const getEntryGratitudes = [getEntry1, getEntry2, getEntry3];
 
 
-// const getEntryText = document.getElementsByClassName("entry-text-box");
-
 function addEntryToDom(event) {
         event.preventDefault();
-
 
         const heading = document.createElement("h2");
         heading.className = "heading-results";
@@ -173,4 +168,10 @@ function quotesGen() {
       // .then(response => (question = response))
       .then(response => (document.getElementById("quoteresult").innerHTML = response['author'] + 'once said, "'+ response['quote'] + '"'))
       .catch(err => console.error(err));
+}
+
+// edit user name
+function nameGen() {
+  var name = document.getElementById("user-name").value;
+  document.getElementById("journal-name").innerHTML = name + "'s Journal";
 }
