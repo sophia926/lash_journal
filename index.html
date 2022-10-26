@@ -10,11 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- This is the title of the tab -->
     <title>My Journal</title>
   </head>
   <body>
     
     <header>
+      <!-- Pressing Submit will change the title of the journal to [insert name]'s Journal to make it more personal -->
       <input type="text" id="user-name" class="name" placeholder="Your Name"/>
       <input class="name-btn" type="button" onClick="nameGen()" Value="Submit"/>
       <h1 class="title" id="journal-name">My Journal</h1>
@@ -22,29 +24,29 @@
     
 
     
-    <!-- Journal Entry Section -->
+    <!-- Create New Journal Entry Section -->
     <section class="section journal-section">
       <div class="container">
         <div class="container-row container-row-journal">
           <div class="container-item container-item-journal">
 
-
+            <!-- This creates a collapsible, so you can expand it when you want to create a new journal entry. -->
             <button type="button" class="collapsible">Create a New Journal Entry</button>
             <div class="content">
                 <br>
                 
                 <form id="entryForm" action="">
 
-                    <!-- new journal entry -->
+                    <!-- Journal Entry Name -->
                     <label for="entry-title" class="journal-label">New Journal Entry</label>
                     <p class="description">💡 Creative tip: Try to come up with a creative name for your day :)</p>
                     <input type="text" name="entry-title" id="entry-title" class="entry-text-title" placeholder="Name of entry ✏️"/>
                     
-                    <!-- date -->
+                    <!-- Date -->
                     <label for="entry-title" class="journal-label">Date</label>
                     <input type="text" name="entry-title" id="entry-title" class="date" placeholder="Date 📆"/>
 
-                    <!-- mood -->
+                    <!-- Mood, this is where the user enters in their mood through a slider and the emojis change -->
                     <label for="entry-title" class="journal-label">Mood Rating</label>
                     <p class="description">😁 Rate your mood on a scale from 1-10 :)</p>
                     <div class="slidecontainer">
@@ -52,20 +54,21 @@
                       <input type="range" min="1" max="10" value="5" class="slider" id="mood">
                     </div>
 
+                    <!-- These are line breaks to make the interface more aesthetically pleasing -->
                     <br><br>
                     
-                    <!-- entry text -->
+                    <!-- Here's the main section of the journal, where the user writes about their day for the journal -->
                     <label for="entry" class="journal-label">Journal about your day here...</label>
                     <textarea name="daily-entry" id="entry" class="entry-text-box" placeholder="What's on your mind today? 💭 &#10Don't know what to write about? Here are some questions to get you started on your entry: &#10-What'd you eat throughout the day? &#10-Did you go anywhere? &#10-Did you see anybody? &#10-How did you feel?"></textarea>
 
-                    <!-- gratitudes -->
+                    <!-- Here the user can enter three gratitudes about their day to improve their social emotional health -->
                     <label for="entry" class="journal-label">3 Gratitudes...</label>
                     <p class="description">🙏 Try to think of three gratitudes for today... </p>
                     <textarea id="entry1" class="gratitude-text-box" placeholder="Gratitude #1"></textarea>
                     <textarea id="entry2" class="gratitude-text-box" placeholder="Gratitude #2"></textarea>
                     <textarea id="entry3" class="gratitude-text-box" placeholder="Gratitude #3"></textarea>
-                    <!-- Gratitude inspiration question RANDOM API -->
-                    <button type="button" class="grat-collapsible">Need inspiration?</button>
+                    <!-- This is an API that generates a random question to help the user think of gratitudes, also a collapsible -->
+                    <button type="button" class="grat-collapsible">Can't think of a gratitude?</button>
                     <div class="grat-content">
                       <input class="btn-light gratitude-submit-btn" type="button" onClick="gratitudeGen()" Value="Press to generate a gratitude question!"/>
                       <p class="description">Gratitude question: <br>
@@ -75,14 +78,14 @@
 
                     <br><br>
 
-                    <!-- Inspirational quote RANDOM API -->
-                    <label for="entry" class="journal-label">Here's some motivation...</label>
+                    <!-- This is an API that generates a random inspirational quote to motivate the user -->
+                    <label for="entry" class="journal-label">Do you need some motivation?</label>
                     <input class="btn-light gratitude-submit-btn" type="button" onClick="quotesGen()" Value="Press to generate a inspirational quote!"/>
                     <span id="quoteresult"></span>
 
                     <br><br><br>
 
-                    <!-- submit button -->
+                    <!-- Submit button -->
                     <button class="btn-main entry-submit-btn" type="submit">Submit</button>
                 </form>
 
@@ -95,7 +98,7 @@
       </div>
     </section>
 
-    <!-- Journal Entry Results -->
+    <!-- Here are all the journal entries that the user submitted -->
     <section class="section sectionEntryResults" id="entryResultsSection">
       <h2>Journal Entries</h2>
       <div class="container">

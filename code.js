@@ -1,6 +1,7 @@
     /* eslint-disable */
 
 // Journal Entry Form
+// Here is getting all the variables and content from the journal entry form
 
 const entryForm = document.querySelector("#entryForm");
 const entryResultsSection = document.querySelector("#entryResultsSection");
@@ -17,6 +18,7 @@ const getEntry3 = document.getElementById("entry3");
 const getEntryGratitudes = [getEntry1, getEntry2, getEntry3];
 
 
+// This adds the journal entry to the list
 function addEntryToDom(event) {
         event.preventDefault();
 
@@ -61,6 +63,7 @@ function addEntryToDom(event) {
         getEntryText[0].value = "";
 }
 
+// When the submit button is clicked, the addEntryToDom function will be executed
 entryForm.addEventListener("submit", addEntryToDom);
 
 // Collapsible enter a new journal entry
@@ -95,13 +98,14 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-// MOOD SLIDER
+// Here's the mood slider
 var slider = document.getElementById("mood");
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.innerHTML = slider.value;
   output = slider.value;
   document.getElementById("output").innerHTML = output;
+  // Change the emoji based on the value
   if (output == 1) {
     document.getElementById("output").innerHTML = output + " 😢";
   }
@@ -134,7 +138,7 @@ slider.oninput = function() {
   }
 }
 
-// api gratitude
+// API gratitude
 function gratitudeGen() {
   const options = {
       method: 'GET',
@@ -152,7 +156,7 @@ function gratitudeGen() {
       .catch(err => console.error(err));
 }
 
-// api inspiration quotes
+// API inspiration quotes
 function quotesGen() {
   const options = {
       method: 'GET',
@@ -166,11 +170,11 @@ function quotesGen() {
       .then(response => response.json())
       // .then(response => console.log(response))
       // .then(response => (question = response))
-      .then(response => (document.getElementById("quoteresult").innerHTML = response['author'] + 'once said, "'+ response['quote'] + '"'))
+      .then(response => (document.getElementById("quoteresult").innerHTML = response['author'] + ' once said, "'+ response['quote'] + '"'))
       .catch(err => console.error(err));
 }
 
-// edit user name
+// Edit the user name at the top of the journal
 function nameGen() {
   var name = document.getElementById("user-name").value;
   document.getElementById("journal-name").innerHTML = name + "'s Journal";
